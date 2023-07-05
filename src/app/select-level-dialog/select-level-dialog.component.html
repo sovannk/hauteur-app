@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Tu roxes du poney</h1>
+<div mat-dialog-content>
+  <p>Choisis ton niveau de difficulté</p>
+  <mat-slider min="0" max="7" step="1" showTickMarks discrete [displayWith]="formatLabel">
+    <input matSliderThumb>
+  </mat-slider>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.currentLevel" cdkFocusInitial>Ok</button>
+</div>

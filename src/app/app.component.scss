@@ -1,0 +1,50 @@
+.wrapper {
+    padding: 30px;
+    .container {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .header {
+            border: 1px solid brown;
+            border-radius: 5px;
+            font-size: 40px;
+            padding: 20px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .notes {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .note {
+                height: 40px;
+                margin: 40px;
+                &:hover {
+                    cursor: pointer;
+                }
+               
+            }
+            .shaked { animation: tilt-shaking 0.25s linear infinite; } 
+            }
+        }
+        .replay {
+            border: 1px solid brown;
+            border-radius: 5px;
+            font-size: 20px;
+            padding: 10px;
+            &:hover {
+                cursor: pointer;
+            }
+
+    }
+}
