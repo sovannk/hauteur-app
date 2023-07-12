@@ -9,6 +9,13 @@ import { DialogData } from '../app.component';
 })
 export class SelectLevelDialogComponent {
 
+  public value: number = 0;
+
+  constructor(
+    public dialogRef: MatDialogRef<SelectLevelDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+  ) {}
+
   formatLabel(value: number): string {
     if (value >= 1000) {
       return Math.round(value / 1000) + 'k';
@@ -17,10 +24,7 @@ export class SelectLevelDialogComponent {
     return `${value}`;
   }
 
-  constructor(
-    public dialogRef: MatDialogRef<SelectLevelDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,
-  ) {}
+
 
   onNoClick(): void {
     this.dialogRef.close();

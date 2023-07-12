@@ -2,10 +2,10 @@
 <div mat-dialog-content>
   <p>Choisis ton niveau de difficulté</p>
   <mat-slider min="0" max="7" step="1" showTickMarks discrete [displayWith]="formatLabel">
-    <input matSliderThumb>
+    <input matSliderThumb [(ngModel)]="value">
   </mat-slider>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data.currentLevel" cdkFocusInitial>Ok</button>
+  <button mat-button [mat-dialog-close]="value" cdkFocusInitial>Ok</button>
 </div>

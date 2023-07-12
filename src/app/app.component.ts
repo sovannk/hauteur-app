@@ -81,6 +81,11 @@ export class AppComponent implements OnInit {
 
   constructor(public dialog: MatDialog) {}
 
+
+  ngOnInit(): void {
+    this.userStats = { currentLevel : 1 } 
+  }
+
   openDialog(): void {
     const dialogRef = this.dialog.open(SelectLevelDialogComponent, {
       data: {currentLevel : this.currentLevel},
@@ -88,12 +93,10 @@ export class AppComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
+      console.log(result);
+      
       this.currentLevel = result;
     });
-  }
-
-  ngOnInit(): void {
-    this.userStats = { currentLevel : 1 } 
   }
 
   public triggerGame(): void {
